@@ -1,9 +1,12 @@
 /*
- *      Author: Manar Hashem
- *  	Date: Oct 20, 2023
- *  	Version: 1.0
- * 		Description: DIO_program source file
- */
+ ============================================================================
+ Name		 : DIO_program.c
+ Author		 : Manar Hashem
+ Date		 : Oct 20, 2023
+ Version	 : 1.0
+ Description : DIO_program source file
+ ============================================================================
+*/
 
 #include "../../LIB/STD_types.h"
 #include "../../LIB/Bit_math.h"

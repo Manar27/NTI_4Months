@@ -1,9 +1,12 @@
 /*
- *      Author: Manar Hashem
- *  	Date: Oct 20, 2023
- *  	Version: 1.0
- * 		Description: DIO_register header file
- */
+ ============================================================================
+ Name		 : DIO_register.h
+ Author		 : Manar Hashem
+ Date		 : Oct 20, 2023
+ Version	 : 1.0
+ Description : DIO_register header file
+ ============================================================================
+*/
 
 #ifndef DIO_REGISTER_H_
 #define DIO_REGISTER_H_

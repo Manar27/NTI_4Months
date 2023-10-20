@@ -1,10 +1,12 @@
 /*
- *      Author: Manar Hashem
- *  	Date: Oct 20, 2023
- *  	Version: 1.0
- * 		Description: DIO_interface header file
- */
-
+ ============================================================================
+ Name		 : DIO_interface.h
+ Author		 : Manar Hashem
+ Date		 : Oct 20, 2023
+ Version	 : 1.0
+ Description : DIO_interfac header file
+ ============================================================================
+*/
 #ifndef DIO_INTERFACE_H_
 #define DIO_INTERFACE_H_
 
@@ -31,6 +33,8 @@
 #define DIO_HIGH	1
 #define DIO_LOW		0
 
+#define DIO_PORT_OUTPUT		0xFF
+#define DIO_PORT_INPUT		0x00
 void DIO_VoidSetPortDirection(u8 Copy_u8PortID, u8 Copy_u8PortDir);
 void DIO_VoidSetPortValue(u8 Copy_u8PortID, u8 Copy_u8PortVal);
 void DIO_VoidSetPinDirection(u8 Copy_u8PortID, u8 Copy_u8PinNo, u8 Copy_u8PinDir);
