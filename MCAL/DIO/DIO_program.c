@@ -6,7 +6,7 @@
  Version	 : 1.0
  Description : DIO_program source file
  ============================================================================
-*/
+ */
 
 #include "../../LIB/STD_types.h"
 #include "../../LIB/Bit_math.h"
@@ -163,4 +163,30 @@ void DIO_VoidTogPin(u8 Copy_u8PortID, u8 Copy_u8PinNo)
 		break;
 	}
 }
-
+u8 DIO_u8GetPinVal(u8 Copy_u8PortID, u8 Copy_u8PinNo)
+{
+	u8 Local_returndata = 0;
+	if (Copy_u8PortID <= PORT_D && Copy_u8PinNo <= PIN_7)
+	{
+		switch (Copy_u8PortID)
+		{
+		case PORT_A:
+			Local_returndata = GET_BIT(DIO_PINA, Copy_u8PinNo);
+			break;
+		case PORT_B:
+			Local_returndata = GET_BIT(DIO_PINB, Copy_u8PinNo);
+			break;
+		case PORT_C:
+			Local_returndata = GET_BIT(DIO_PINC, Copy_u8PinNo);
+			break;
+		case PORT_D:
+			Local_returndata = GET_BIT(DIO_PIND, Copy_u8PinNo);
+			break;
+		}
+		return Local_returndata;
+	}
+	else
+	{
+		return -1;
+	}
+}

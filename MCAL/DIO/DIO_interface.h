@@ -35,9 +35,13 @@
 
 #define DIO_PORT_OUTPUT		0xFF
 #define DIO_PORT_INPUT		0x00
+
 void DIO_VoidSetPortDirection(u8 Copy_u8PortID, u8 Copy_u8PortDir);
 void DIO_VoidSetPortValue(u8 Copy_u8PortID, u8 Copy_u8PortVal);
 void DIO_VoidSetPinDirection(u8 Copy_u8PortID, u8 Copy_u8PinNo, u8 Copy_u8PinDir);
 void DIO_VoidSetPinVal(u8 Copy_u8PortID, u8 Copy_u8PinNo, u8 Copy_u8PinVal);
+u8 DIO_u8GetPinVal(u8 Copy_u8PortID, u8 Copy_u8PinNo);
+void DIO_VoidTogPin(u8 Copy_u8PortID, u8 Copy_u8PinNo);
+
 
 #endif /* DIO_INTERFACE_H_ */

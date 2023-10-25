@@ -1,15 +1,15 @@
 /*
  ============================================================================
- Name        : SEVSEG_config.h
+ Name        : SSD_config.h
  Author      : Manar Hashem
  Date		 : Oct 20, 2023
  Version     : 1.0
- Description : SEVSEG_config header file
+ Description : SSD_config header file
  ============================================================================
  */
 
-#ifndef HAL_SEVSEG_SEVSEG_CONFIG_H_
-#define HAL_SEVSEG_SEVSEG_CONFIG_H_
+#ifndef HAL_SSD_SSD_CONFIG_H_
+#define HAL_SSD_SSD_CONFIG_H_
 
 /*********** BCD Decoder Pins ***********/
 #define BCD_A_PIN		PIN_0
@@ -31,6 +31,6 @@
 #define COM4_PIN		PIN_6
 #define COM4_PORT		PORT_B
 
-#define SEVSEG_SELECT	SEVSEG_NO_1
+#define SSD_SELECT		SSD_NO_1
 
-#endif /* HAL_SEVSEG_SEVSEG_CONFIG_H_ */
+#endif /* HAL_SSD_SSD_CONFIG_H_ */

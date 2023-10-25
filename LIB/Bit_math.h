@@ -24,4 +24,16 @@
 #define SET_BYTE(REG,VAL)	(REG = VAL)
 
 #define MASK(REG,MASK_VAL)	(REG &= MASK_VAL)
+
+#define GET_MSB(REG,No_Bits)	(REG >> No_Bits)
+
+#define BIT_0		(u8)0x00
+#define BIT_1		(u8)0x01
+#define BIT_2		(u8)0x02
+#define BIT_3		(u8)0x03
+#define BIT_4		(u8)0x04
+#define BIT_5		(u8)0x05
+#define BIT_6		(u8)0x06
+#define BIT_7		(u8)0x07
+
 #endif /* COMMON_BITMATH_H_ */
