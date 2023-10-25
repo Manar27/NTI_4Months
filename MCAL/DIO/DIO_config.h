@@ -2,8 +2,8 @@
  ============================================================================
  Name		 : DIO_config.h
  Author		 : Manar Hashem
- Date		 : Oct 20, 2023
- Version	 : 1.0
+ Date		 : Oct 25, 2023
+ Version	 : 2.0 (Struct Configuration)
  Description : DIO_config header file
  ============================================================================
 */

@@ -3,7 +3,7 @@
  Name		 : DIO_register.h
  Author		 : Manar Hashem
  Date		 : Oct 20, 2023
- Version	 : 1.0
+ Version	 : 2.0 (Struct Configuration)
  Description : DIO_register header file
  ============================================================================
 */
@@ -11,20 +11,75 @@
 #ifndef DIO_REGISTER_H_
 #define DIO_REGISTER_H_
 
-#define DIO_DDRA	*((volatile u8 *)0x3A)
-#define DIO_PORTA	*((volatile u8 *)0x3B)
-#define DIO_PINA	*((volatile u8 *)0x39)
+typedef union
+{
+	struct
+	{
+		u8 Bit0 	: 1;
+		u8 Bit1 	: 1;
+		u8 Bit2 	: 1;
+		u8 Bit3 	: 1;
+		u8 Bit4 	: 1;
+		u8 Bit5 	: 1;
+		u8 Bit6 	: 1;
+		u8 Bit7 	: 1;
+	}Bit;
+	u8 Byte;
+}DDR_t;
 
-#define DIO_DDRB	*((volatile u8 *)0x37)
-#define DIO_PORTB	*((volatile u8 *)0x38)
-#define DIO_PINB	*((volatile u8 *)0x36)
+/*******************************************************/
 
-#define DIO_DDRC	*((volatile u8 *)0x34)
-#define DIO_PORTC	*((volatile u8 *)0x35)
-#define DIO_PINC	*((volatile u8 *)0x33)
+#define DIO_DDRA			((volatile DDR_t *)0x3A)
+#define DIO_DDRB			((volatile DDR_t *)0x37)
+#define DIO_DDRC			((volatile DDR_t *)0x34)
+#define DIO_DDRD			((volatile DDR_t *)0x31)
 
-#define DIO_DDRD	*((volatile u8 *)0x31)
-#define DIO_PORTD	*((volatile u8 *)0x32)
-#define DIO_PIND	*((volatile u8 *)0x30)
+/*******************************************************/
+typedef union
+{
+	struct
+	{
+		u8 Bit0 	: 1;
+		u8 Bit1 	: 1;
+		u8 Bit2 	: 1;
+		u8 Bit3 	: 1;
+		u8 Bit4 	: 1;
+		u8 Bit5 	: 1;
+		u8 Bit6 	: 1;
+		u8 Bit7 	: 1;
+	}Bit;
+	u8 Byte;
+}PORT_t;
+
+/*******************************************************/
+
+#define DIO_PORTA			((volatile PORT_t *)0x3B)
+#define DIO_PORTB			((volatile PORT_t *)0x38)
+#define DIO_PORTC			((volatile PORT_t *)0x35)
+#define DIO_PORTD			((volatile PORT_t *)0x32)
+
+/*******************************************************/
+typedef union
+{
+	struct
+	{
+		u8 Bit0 	: 1;
+		u8 Bit1 	: 1;
+		u8 Bit2 	: 1;
+		u8 Bit3 	: 1;
+		u8 Bit4 	: 1;
+		u8 Bit5 	: 1;
+		u8 Bit6 	: 1;
+		u8 Bit7 	: 1;
+	}Bit;
+	u8 Byte;
+}PIN_t;
+
+/*******************************************************/
+
+#define DIO_PINA			((volatile PIN_t *)0x39)
+#define DIO_PINB			((volatile PIN_t *)0x36)
+#define DIO_PINC			((volatile PIN_t *)0x33)
+#define DIO_PIND			((volatile PIN_t *)0x30)
 
 #endif /* DIO_REGISTER_H_ */
