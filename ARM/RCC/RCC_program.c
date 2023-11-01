@@ -128,3 +128,55 @@ void RCC_voidEnableClock_2 (u8 Copy_u8PeripheralId)
 		/* Return Error */
 	}
 }
+void RCC_voidDisableClock (u8 Copy_u8BusId, u8 Copy_u8PeripheralId)
+{
+	if(Copy_u8PeripheralId <= 31)
+	{
+		switch (Copy_u8BusId)
+		{
+		/* AHB Bus */
+		case RCC_AHB:
+			CLR_BIT(RCC->AHBENR , Copy_u8PeripheralId);
+			break;
+		/* APB1 Bus */
+		case RCC_APB1:
+			CLR_BIT(RCC->APB1ENR , Copy_u8PeripheralId);
+			break;
+		/* APB2 Bus */
+		case RCC_APB2:
+			CLR_BIT(RCC->APB2ENR , Copy_u8PeripheralId);
+			break;
+
+		default:
+			/* Return Error */
+			break;
+		}
+
+	}
+	else
+	{
+		/* Return Error */
+	}
+}
+void RCC_voidDisableClock_2 (u8 Copy_u8PeripheralId)
+{
+	/* AHB Bus */
+	if(Copy_u8PeripheralId <= AHB_END  && Copy_u8PeripheralId >= AHB_START)
+	{
+		CLR_BIT(RCC->AHBENR, (Copy_u8PeripheralId-AHB_START) );
+	}
+	/* APB1 Bus */
+	else if(Copy_u8PeripheralId <= APB1_END  && Copy_u8PeripheralId >= APB1_START)
+	{
+		CLR_BIT(RCC->APB1ENR, (Copy_u8PeripheralId-APB1_START) );
+	}
+	/* APB2 Bus */
+	else if (Copy_u8PeripheralId <= APB2_END  && Copy_u8PeripheralId >= APB2_START)
+	{
+		CLR_BIT(RCC->APB2ENR, (Copy_u8PeripheralId-APB2_START) );
+	}
+	else
+	{
+		/* Return Error */
+	}
+}

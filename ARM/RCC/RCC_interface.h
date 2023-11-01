@@ -24,5 +24,7 @@
 void RCC_voidInitSysClock (void);
 void RCC_voidEnableClock (u8 Copy_u8BusId, u8 Copy_u8PeripheralId);
 void RCC_voidEnableClock_2 (u8 Copy_u8PeripheralId);
+void RCC_voidDisableClock (u8 Copy_u8BusId, u8 Copy_u8PeripheralId);
+void RCC_voidDisableClock_2 (u8 Copy_u8PeripheralId);
 
 #endif /*MCAL_RCC_RCC_INTERFACE_H_*/
