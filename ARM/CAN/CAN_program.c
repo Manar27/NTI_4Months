@@ -4,7 +4,7 @@
  Author		 : Manar Hashem - Martina Mofied
  Date		 : Oct 31, 2023
  Version	 : 1.0
- Description : CAN_program header file
+ Description : CAN_program source file
  ============================================================================
 */
 #include "BIT_MATH.h"
